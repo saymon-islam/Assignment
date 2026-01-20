@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechWave</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Arial;
+      background-color: #0f0b1a;
+      color: #eae6ff;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .header-wrap {
+      display: grid;
+      grid-template-columns: auto 1fr auto; /* logo | menu | button */
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,11,26,.9);
+      padding: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* লোগো সবসময় বাঁ দিকে থাকবে */
+    }
+
+    .brand .logo {
+      height: 30px;   /* সাইজ ছোট করা হলো */
+      width: auto;
+      margin-left: 5px; /* একটু বামে সরানো হলো */
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center; /* মাঝখানে থাকবে */
+      gap: 24px;
+    }
+
+    .menu a {
+      color: #eae6ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu a:hover {
+      color: #00d4ff;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ff7a18, #af002d 70%);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #fff, #ff7a18, #af002d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #bfb6e6;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <!-- লোগো বাঁ দিকে -->
+      <div class="brand">
+        <img src="assets/TechWave.png" alt="TechWave Logo" class="logo" />
+      </div>
+
+      <!-- মেনু মাঝখানে -->
+      <nav class="menu">
+        <a href="#about">About</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#host">Host</a>
+      </nav>
+
+      <!-- Subscribe বাটন ডান দিকে -->
+      <button class="btn-primary">Subscribe</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>TechWave</h1>
+    <p>Your daily dose of tech insights, productivity hacks, and personal growth.</p>
+  </section>
+</body>
+</html>
